@@ -3,10 +3,13 @@ let config = require('../botconfig.json')
 let red = config.red;
 module.exports.run = async (bot, message, args) => {
   let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  if(!kUser) return message.reply("Please provide a user");
+
 
   let killEmbed = new Discord.RichEmbed()
   .setColor(red)
-  .setDescription(`:knife: I just killed ${kUser}. :knife:`);
+  .setDescription(`:knife: I just killed ${kUser}. :knife:`)
+  .setFooter("Funk by: cf#6969");
 
   message.channel.send(killEmbed);
 }

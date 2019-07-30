@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Region", message.guild.region, true)
         .addField("Created On", message.guild.createdAt, true)
         .addField("You Joined", message.member.joinedAt, true)
-        .setFooter("Server Bot. By: cf#6969");
+        .setFooter("Funk. By: cf#6969");
 
     message.channel.send(serverembed);
 }

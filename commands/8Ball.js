@@ -5,7 +5,7 @@ let cyan = config.cyan;
 
 
 module.exports.run = async (bot, message, args) => {
-  if(!args[3]) return message.reply("Please ask a full question!");
+  if(!args[1]) return message.reply("Please ask a full question!");
   let replies = [
     "Yes",
     "No",

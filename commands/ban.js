@@ -10,6 +10,7 @@ module.exports.run = async (bot, message, args) => {
     if (!message.member.hasPermission("MANAGE_MEMBERS")) return errors.noPerms(message, "MANAGE_MEMBERS");
     if (bUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
 
+
     let banEmbed = new Discord.RichEmbed()
         .setDescription("~Ban~")
         .setColor("#bc0000")
@@ -18,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Banned In", message.channel)
         .addField("Time", message.createdAt)
         .addField("Reason", bReason)
-        .setFooter("Server Bot. By: cf#6969");
+        .setFooter("Funk. By: cf#6969");
     let incidentchannel = message.guild.channels.find(`name`, "incidents");
     if (!incidentchannel) return message.channel.send("Can't find incidents channel.");
 

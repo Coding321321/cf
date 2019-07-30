@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
          .addField("Unbanned In", message.channel)
          .addField("Time", message.createdAt)
          .addField("Reason", reason)
-         .setFooter("Server Bot. By: cf#6969");
+         .setFooter("Funk. By: cf#6969");
 
      let incidentchannel = message.guild.channels.find(`name`, "incidents");
      if (!incidentchannel) return message.channel.send("Can't find incidents channel.");

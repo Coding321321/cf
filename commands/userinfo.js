@@ -1,17 +1,24 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
-    let uicon = message.author.displayAvatarURL;
+
+  let user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+  let user2 = message.mentions.users.first() || message.guild.members.get(args[0]);
+
+  if(!user) return message.channel.send("Please provide a user");
+
+
+    let uicon = user.displayAvatarURL;
     let botembed = new Discord.RichEmbed()
         .setThumbnail(uicon)
-        .setTitle(`${message.author.username} Info`)
+        .setTitle(`${user} Info`)
         .setColor("#15f153")
-        .addField("Username", message.author.username, true)
-        .addField("User Id", message.author.id, true)
-        .addField("Joined discord", message.author.createdAt)
-        .addField("Roles", message.member.roles.array(), true)
-        .addField('Status', message.author.presence.status, true)
-        .setFooter("Server Bot. By: cf#6969");
+        .addField("Username", user.username, true)
+        .addField("User Id", user.id, true)
+        .addField("Joined discord", user2.createdAt)
+        .addField("Roles", user.roles.array(), true)
+        .addField('Status', user.presence.status, true)
+        .setFooter("Funk. By: cf#6969");
         message.channel.send(botembed);
 
 }

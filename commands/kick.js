@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Kicked In", message.channel)
         .addField("Tiime", message.createdAt)
         .addField("Reason", kReason)
-        .setFooter("Server Bot. By: cf#6969");
+        .setFooter("Funk. By: cf#6969");
     let kickChannel = message.guild.channels.find(`name`, "incidents");
     if (!kickChannel) return message.channel.send("Can't find incidents channel.");
 

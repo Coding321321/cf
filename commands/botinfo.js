@@ -29,15 +29,27 @@ module.exports.run = async (bot, message, args) => {
         .addField("!meme")
         .addField('!kill', '!kill @user', true)
         .addField('!contact', 'Gives you my discord and youtube to contact me', true)
+        .addField('!credits', "people who helped with the bot")
+        .setFooter("Funk. By: cf#6969");
+
+
+
+        const botembed2 = new Discord.RichEmbed()
         .addField('!kms', 'Just kill yourself but on discord')
         .addField('!announce', 'Announce something but you will need a Verified role or it won\'t ping everyone')
         .addField('!8ball', "Do i even need to explain?")
         .addField("!mfo", "Make fun of some text you put")
         .addField("!gif <something you want to search>", "Search for a gif")
         .addField("!cow", "Makes a random cow")
-        .setFooter("Server Bot. By: cf#6969");
-
+        .addField("!death", "Generates a reason for death")
+        .addField("!fortune", "a fortune command")
+        .addField("!invite", "Get an invite link to invite the bot to your server")
+        .addField("!discord", "Get the link to the testing server for the bot")
+        .addField("!fight", "Fights a player you want to fight")
+        .setColor(yellow)
+        .setFooter("Funk Bt: cf#6969");
     message.channel.send(botembed);
+    message.channel.send(botembed2);
 }
 
 module.exports.help = {

@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const mongoose = require('mongoose');
 
 
 module.exports.run = async (bot, message, args) => {
@@ -17,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Channel", message.channel)
         .addField("Time", message.createdAt)
         .addField('Reason', reason)
-        .setFooter("Server Bot. By: cf#6969");
+        .setFooter("Funk. By: cf#6969");
     let reportsChannel = message.guild.channels.find(`name`, "reports");
     if (!reportsChannel) return message.channels.send("Couldn't find reports channel.");
 

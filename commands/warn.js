@@ -1,6 +1,6 @@
 
 const Discord = require("discord.js");
-const fs = require("fs");
+const fs = require("file-system");
 const ms = require("ms");
 let warns = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
 
@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args) => {
         .addField("Warned In", message.channel)
         .addField("Number of Warnings", warns[wUser.id].warns)
         .addField("Reason", reason)
-        .setFooter("Server Bot. By: cf#6969");
+        .setFooter("Funk. By: cf#6969");
     let warnchannel = message.guild.channels.find(`name`, "incidents");
     if (!warnchannel) return message.reply("Couldn't find channel");
 

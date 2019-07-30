@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor(message.author.username)
     .setColor("#00FF00")
     .addField("💸", uCoins)
-    .setFooter("Server Bot. By: cf#6969");
+    .setFooter("Funk. By: cf#6969");
     message.channel.send(coinEmbed)
 
 }
